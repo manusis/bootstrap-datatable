@@ -1,0 +1,36 @@
+.datatable th::after {
+	content: "";
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: black transparent;
+	visibility: hidden;
+	
+}
+
+.datatable th.sort-down::after, .datatable th.sort-down:hover::after {
+	visibility: visible;
+	filter: alpha(opacity=60);
+	-khtml-opacity: 0.6;
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.datatable th.sort-up::after, .datatable th.sort-up:hover::after {
+	border-bottom: none;
+	border-top: 4px solid black;
+	visibility: visible;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	filter: alpha(opacity=60);
+	-khtml-opacity: 0.6;
+	-moz-opacity: 0.6; 
+	opacity: 0.6;
+}
+
+.datatable .sortable {
+	cursor: pointer;
+	
+}
